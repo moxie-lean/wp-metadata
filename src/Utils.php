@@ -1,13 +1,9 @@
-<?php namespace Lean\Utils;
+<?php namespace Lean\Metadata;
 
 /**
- * A suite of functions for working text strings.
- *
- * Class Text.
- *
- * @package Lean\Utils
+ * A suite of utils functions for the metadata package.
  */
-class Text {
+class Utils {
 	/**
 	 * Get text trimmed to the nearest word.
 	 *

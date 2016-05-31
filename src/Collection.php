@@ -1,4 +1,4 @@
-<?php namespace Lean\Utils\Meta;
+<?php namespace Lean\Metadata;
 
 /**
  * A suite of functions for working with a collection's metadata.

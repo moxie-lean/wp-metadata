@@ -1,8 +1,7 @@
-<?php namespace Lean\Utils\Meta;
+<?php namespace Lean\Metadata;
 
 use Lean\Elements\Collection\SiteIdentity;
 use Lean\Acf;
-use Lean\Utils\Text;
 
 /**
  * A suite of functions for working with a post's metadata.
@@ -35,6 +34,7 @@ class Post {
 			[ 'name' => 'twitter:description',	'content' => self::get_post_twitter_description( $post ) ],
 			[ 'name' => 'twitter:image',		'content' => self::get_post_twitter_image( $post ) ],
 		];
+
 		$tags = array_merge( $tags, Site::webmaster_tools() );
 
 		return [
@@ -73,7 +73,7 @@ class Post {
 		$description = get_post_meta( $post->ID, '_yoast_wpseo_metadesc', true );
 
 		if ( empty( $description ) ) {
-			$description = Text::trim_to_nearest_word( wp_strip_all_tags( $post->post_content ), 160 );
+			$description = Utils::trim_to_nearest_word( wp_strip_all_tags( $post->post_content ), 160 );
 		}
 
 		return $description;

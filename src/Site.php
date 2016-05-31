@@ -1,4 +1,4 @@
-<?php namespace Lean\Utils\Meta;
+<?php namespace Lean\Metadata;
 
 /**
  * General data from the site:

@@ -1,8 +1,8 @@
 {
-  "name": "moxie-lean/wp-utils",
-  "description": "A suite of useful functions for your WordPress theme",
-  "keywords": ["wordpress"],
-  "homepage": "https://github.com/moxie-lean/wp-utils",
+  "name": "moxie-lean/wp-metadata",
+  "description": "Generate metadata for your pages.",
+  "keywords": ["wordpress", "yoast", "seo"],
+  "homepage": "https://github.com/moxie-lean/wp-metadata",
   "type": "library",
   "license": "MIT",
   "authors": [
@@ -22,7 +22,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Lean\\Utils\\": "src/"
+      "Lean\\Metadata\\": "src/"
     }
   },
   "require-dev": {
