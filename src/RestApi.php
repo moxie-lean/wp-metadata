@@ -11,7 +11,9 @@ class RestApi {
 	 * Initiate the Metadata Rest API functionality.
 	 */
 	public static function init() {
-		add_action( 'rest_api_init', [ __CLASS__, 'register' ] );
+		if ( function_exists( 'register_rest_field' ) ) {
+			add_action( 'rest_api_init', [ __CLASS__, 'register' ] );
+		}
 	}
 
 	/**
