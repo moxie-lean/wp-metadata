@@ -4,21 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "bb00419921e48779e93e67d13f01efb1",
-    "content-hash": "911dd5de2f939dd3be05dcb95ff779af",
+    "hash": "48a932f2c65547048ef724e4d194613c",
+    "content-hash": "2715dcda7d942705cd6d1105c02c1ec3",
     "packages": [
         {
             "name": "moxie-lean/wp-acf",
-            "version": "1.0.0",
+            "version": "1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/moxie-lean/wp-acf.git",
-                "reference": "15232b3814aa7be8cf01b1d217f75ded1670d7bc"
+                "reference": "e63c1f28ac567d1fe0377fb3c30cf5b0428e9577"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/moxie-lean/wp-acf/zipball/15232b3814aa7be8cf01b1d217f75ded1670d7bc",
-                "reference": "15232b3814aa7be8cf01b1d217f75ded1670d7bc",
+                "url": "https://api.github.com/repos/moxie-lean/wp-acf/zipball/e63c1f28ac567d1fe0377fb3c30cf5b0428e9577",
+                "reference": "e63c1f28ac567d1fe0377fb3c30cf5b0428e9577",
                 "shasum": ""
             },
             "require": {
@@ -49,25 +49,25 @@
                 }
             ],
             "description": "Helper functions for working with Advanced Custom Fields",
-            "homepage": "https://github.com/moxie-leean/wp-acf",
+            "homepage": "https://github.com/moxie-lean/wp-acf",
             "keywords": [
                 "acf",
                 "wordpress"
             ],
-            "time": "2016-04-24 03:21:52"
+            "time": "2016-06-07 00:28:34"
         },
         {
             "name": "moxie-lean/wp-elements",
-            "version": "0.3.3",
+            "version": "0.3.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/moxie-lean/wp-elements.git",
-                "reference": "27357d198faa0ebf30008a47c0d771bfa7d3a6b3"
+                "reference": "5fa77724c40ed102c08ee3e63fe46800cbd465dd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/moxie-lean/wp-elements/zipball/27357d198faa0ebf30008a47c0d771bfa7d3a6b3",
-                "reference": "27357d198faa0ebf30008a47c0d771bfa7d3a6b3",
+                "url": "https://api.github.com/repos/moxie-lean/wp-elements/zipball/5fa77724c40ed102c08ee3e63fe46800cbd465dd",
+                "reference": "5fa77724c40ed102c08ee3e63fe46800cbd465dd",
                 "shasum": ""
             },
             "require": {
@@ -98,22 +98,22 @@
             "keywords": [
                 "wordpress"
             ],
-            "time": "2016-05-10 17:02:23"
+            "time": "2016-06-02 21:09:01"
         }
     ],
     "packages-dev": [
         {
             "name": "squizlabs/php_codesniffer",
-            "version": "2.6.0",
+            "version": "2.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
-                "reference": "1bcdf03b068a530ac1962ce671dead356eeba43b"
+                "reference": "fb72ed32f8418db5e7770be1653e62e0d6f5dd3d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/1bcdf03b068a530ac1962ce671dead356eeba43b",
-                "reference": "1bcdf03b068a530ac1962ce671dead356eeba43b",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/fb72ed32f8418db5e7770be1653e62e0d6f5dd3d",
+                "reference": "fb72ed32f8418db5e7770be1653e62e0d6f5dd3d",
                 "shasum": ""
             },
             "require": {
@@ -178,7 +178,7 @@
                 "phpcs",
                 "standards"
             ],
-            "time": "2016-04-03 22:58:34"
+            "time": "2016-05-30 22:24:32"
         },
         {
             "name": "wp-coding-standards/wpcs",
