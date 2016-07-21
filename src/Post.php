@@ -37,22 +37,22 @@ class Post {
 		$twitter_image = self::get_post_twitter_image( $post );
 
 		if ( ! empty( $og_image ) ) {
-			$og_size = getimagesize( $og_image );
+			$og_image_size = getimagesize( $og_image );
 
 			$tags = array_merge( $tags, [
 				[ 'property' => 'og:image',			'content' => $og_image ],
-				[ 'property' => 'og:image:width',	'content' => $og_size[0] ],
-				[ 'property' => 'og:image:height',	'content' => $og_size[1] ],
+				[ 'property' => 'og:image:width',	'content' => $og_image_size[0] ],
+				[ 'property' => 'og:image:height',	'content' => $og_image_size[1] ],
 			] );
 		}
 
 		if ( ! empty( $twitter_image ) ) {
-			$twitter_size = getimagesize( $twitter_image );
+			$twitter_image_size = getimagesize( $twitter_image );
 
 			$tags = array_merge( $tags, [
 				[ 'name' => 'twitter:image',		'content' => $twitter_image ],
-				[ 'name' => 'twitter:image:width',	'content' => $twitter_size[0] ],
-				[ 'name' => 'twitter:image:height',	'content' => $twitter_size[1] ],
+				[ 'name' => 'twitter:image:width',	'content' => $twitter_image_size[0] ],
+				[ 'name' => 'twitter:image:height',	'content' => $twitter_image_size[1] ],
 			] );
 		}
 
