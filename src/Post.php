@@ -28,12 +28,33 @@ class Post {
 			[ 'property' => 'og:url',			'content' => get_permalink( $post->ID ) ],
 			[ 'property' => 'og:site_name',		'content' => get_bloginfo( 'title' ) ],
 			[ 'property' => 'og:updated_time',	'content' => get_post_modified_time( 'c', true, $post ) ],
-			[ 'property' => 'og:image',			'content' => self::get_post_og_image( $post ) ],
 			[ 'name' => 'twitter:card',			'content' => 'summary' ],
 			[ 'name' => 'twitter:title',		'content' => self::get_post_twitter_title( $post ) ],
 			[ 'name' => 'twitter:description',	'content' => self::get_post_twitter_description( $post ) ],
-			[ 'name' => 'twitter:image',		'content' => self::get_post_twitter_image( $post ) ],
 		];
+
+		$og_image = self::get_post_og_image( $post );
+		$twitter_image = self::get_post_twitter_image( $post );
+
+		if ( ! empty( $og_image ) ) {
+			$og_image_size = getimagesize( $og_image );
+
+			$tags = array_merge( $tags, [
+				[ 'property' => 'og:image',			'content' => $og_image ],
+				[ 'property' => 'og:image:width',	'content' => $og_image_size[0] ],
+				[ 'property' => 'og:image:height',	'content' => $og_image_size[1] ],
+			] );
+		}
+
+		if ( ! empty( $twitter_image ) ) {
+			$twitter_image_size = getimagesize( $twitter_image );
+
+			$tags = array_merge( $tags, [
+				[ 'name' => 'twitter:image',		'content' => $twitter_image ],
+				[ 'name' => 'twitter:image:width',	'content' => $twitter_image_size[0] ],
+				[ 'name' => 'twitter:image:height',	'content' => $twitter_image_size[1] ],
+			] );
+		}
 
 		$tags = array_merge( $tags, Site::webmaster_tools() );
 
