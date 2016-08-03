@@ -28,7 +28,7 @@ class Post {
 			[ 'property' => 'og:url',			'content' => get_permalink( $post->ID ) ],
 			[ 'property' => 'og:site_name',		'content' => get_bloginfo( 'title' ) ],
 			[ 'property' => 'og:updated_time',	'content' => get_post_modified_time( 'c', true, $post ) ],
-			[ 'name' => 'twitter:card',			'content' => 'summary' ],
+			[ 'name' => 'twitter:card',			'content' => self::get_twitter_card_type() ],
 			[ 'name' => 'twitter:title',		'content' => self::get_post_twitter_title( $post ) ],
 			[ 'name' => 'twitter:description',	'content' => self::get_post_twitter_description( $post ) ],
 		];
@@ -211,5 +211,21 @@ class Post {
 		}
 
 		return $image;
+	}
+
+	/**
+	 * Get twitter card type.
+	 *
+	 * @return string
+	 */
+	public static function get_twitter_card_type() {
+		$card = 'summary';
+		$social = get_option( 'wpseo_social' );
+
+		if ( ! empty( $social ) && ! empty( $social['twitter_card_type'] ) ) {
+			$card = $social['twitter_card_type'];
+		}
+
+		return $card;
 	}
 }
