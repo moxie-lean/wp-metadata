@@ -12,6 +12,9 @@ use Lean\Acf;
  * @package Lean\Utils
  */
 class Post {
+
+	const HOOK_PREFIX = 'lean_metadata_post_';
+
 	/**
 	 * Get all metadata for a post.
 	 *
@@ -139,7 +142,11 @@ class Post {
 	 * @return string
 	 */
 	public static function get_post_og_image( $post ) {
-		$image = get_post_meta( $post->ID, '_yoast_wpseo_opengraph-image', true );
+		$image = apply_filters(
+			self::HOOK_PREFIX . 'og_image',
+			get_post_meta( $post->ID, '_yoast_wpseo_opengraph-image', true ),
+			$post
+		);
 
 		if ( empty( $image ) ) {
 			$image = self::get_fallback_image( $post );
@@ -187,7 +194,11 @@ class Post {
 	 * @return string
 	 */
 	public static function get_post_twitter_image( $post ) {
-		$image = get_post_meta( $post->ID, '_yoast_wpseo_twitter-image', true );
+		$image = apply_filters(
+			self::HOOK_PREFIX . 'twitter_image',
+			get_post_meta( $post->ID, '_yoast_wpseo_twitter-image', true ),
+			$post
+		);
 
 		if ( empty( $image ) ) {
 			$image = self::get_fallback_image( $post );
